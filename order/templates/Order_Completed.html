@@ -1,0 +1,53 @@
+{% extends 'homebase.html' %}
+{% load i18n %}
+{% block title %} Order Complated {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+
+{% block sidebar %} {% include 'sidebar.html' %} {% endblock %}
+
+{% block body %}
+
+    <!-- BREADCRUMB -->
+    <div id="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                <li class="active">{% trans "Order Complated" %}</li>
+            </ul>
+        </div>
+    </div>
+    <!-- /BREADCRUMB -->
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="order-summary clearfix">
+                        <div class="section-title">
+                            <h3 class="title">{% trans "Order Complated" %}</h3>
+                        </div>
+                        <hr>
+                        <h2>{% trans "Dear" %}  {{ user.first_name }} {{  user.last_name }}</h2>
+                        <hr>
+                        <h3>{% trans "Your order is completed" %}</h3>
+                        <h3>{% trans "Order Code" %} : {{ ordercode }}</h3>
+                        <h3>{% trans "Thank You" %}</h3>
+                        <hr>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /section -->
+
+{% endblock %}

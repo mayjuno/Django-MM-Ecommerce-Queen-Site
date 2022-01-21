@@ -1,0 +1,80 @@
+{% extends 'homebase.html' %}
+{% load i18n %}
+{% load currency %}
+{% block title %} Order Produts {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+
+{% block sidebar %} {% include 'sidebar.html' %} {% endblock %}
+
+{% block body %}
+
+    <!-- BREADCRUMB -->
+    <div id="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+				<li class="active">{% trans "Order Products" %}</li>
+            </ul>
+        </div>
+    </div>
+    <!-- /BREADCRUMB -->
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-2">
+                    {% include "user_panel.html" %}
+                </div>
+
+                <div class="col-md-10">
+                    <div class="order-summary clearfix">
+                        <div class="section-title">
+                            <h3 class="title">{% trans "Order Product List" %}</h3>
+                        </div>
+
+                        <table class="shopping-cart-table table">
+                            <tr>
+                                <th class="text-left">{% trans "Id " %}</th>
+                                <th class="text-left">{% trans "Product Name" %}</th>
+                                <th class="text-left">{% trans "Price" %}</th>
+                                <th class="text-left">{% trans "Quantity" %}</th>
+                                <th class="text-left">{% trans "Amount" %}</th>
+                                <th class="text-left">{% trans "Status" %}</th>
+                                <th class="text-left">{% trans "Date" %}</th>
+                                <th class="text-left">{% trans "Detail" %}</th>
+                            </tr>
+                            {% for rs in order_product %}
+                                <tr>
+                                    <td class="text-left">
+
+                                        <a href="{% url 'product_detail' rs.product_id rs.product.slug %}">
+                                                <img src="{{rs.product.image.url}}" alt="" style="height: 80px">
+                                        </a>
+
+                                    </td>
+                                    <td>{{ rs.product.title}}</td>
+                                    <td class="text-left">{{ rs.price|currency:request.session.currency }}{{ request.session.currency }}</td>
+                                    <td class="text-left">{{ rs.quantity}} </td>
+                                    <td class="text-left">{{ rs.amount}} </td>
+                                    <td class="text-left">{{ rs.status}} </td>
+                                    <td class="text-left">{{ rs.create_at}} </td>
+                                    <td class="text-left"><a class="primary-btn" href="{% url 'user_order_product_detail' rs.id rs.order.id %}">{% trans "Detail" %}</a></td>
+
+                                </tr>
+                            {% endfor %}
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /section -->
+
+{% endblock %}

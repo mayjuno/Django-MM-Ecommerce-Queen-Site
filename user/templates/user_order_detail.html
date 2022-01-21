@@ -1,0 +1,115 @@
+{% extends 'homebase.html' %}
+{% load i18n %}
+{% load currency %}
+{% block title %} Order Detail {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+
+{% block sidebar %} {% include 'sidebar.html' %} {% endblock %}
+
+{% block body %}
+
+    <!-- BREADCRUMB -->
+    <div id="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+				<li class="active">{% trans "Order Detail" %}</li>
+            </ul>
+        </div>
+    </div>
+    <!-- /BREADCRUMB -->
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-3">
+                    {% include "user_panel.html" %}
+                </div>
+
+                <div class="col-md-9">
+                    <div class="order-summary clearfix">
+                        <div class="section-title">
+                            <h3 class="title">{% trans "Order Detail" %}</h3>
+                        </div>
+                        <table class="shopping-cart-table table">
+                            <tr>
+                                <th class="text-left">{% trans "Name Surname" %}</th>
+                                <td class="text-left">{{ order.first_name}} {{ order.last_name }} </td>
+                            </tr>
+                            <tr>
+                                <th class="text-left">{% trans "Phone" %}</th>
+                                <td class="text-left">{{ order.phone }}</td>
+                            </tr>
+                            <tr>
+                                <th class="text-left">{% trans "Address" %}</th>
+                                <td class="text-left">{{ order.address }}</td>
+                            </tr>
+                            <tr>
+                                <th class="text-left">{% trans "City" %}</th>
+                                <td class="text-left">{{ order.city }}</td>
+                            </tr>
+                            <tr>
+                                <th class="text-left">{% trans "Country" %}</th>
+                                <td class="text-left">{{ order.country }}</td>
+                            </tr>
+                            <tr>
+                                <th class="text-left">{% trans "Status" %}</th>
+                                <td class="text-left">{{ order.status }}</td>
+                            </tr>
+
+                            <tr>
+                                <th class="text-left">{% trans "Date" %}</th>
+                                <td class="text-left">{{ order.create_at }}</td>
+                            </tr>
+
+                            <th class="text-left">{% trans "Shipping Info" %}</th>
+                            <td class="text-left">{{ order.adminnote }}</td>
+                            </tr>
+
+                        </table>
+
+                        <div class="section-title">
+                            <h4 class="title">{% trans "Order Item List" %}</h4>
+                        </div>
+
+                        <table class="shopping-cart-table table">
+                            <tr>
+                                <th class="text-left">{% trans "Id" %}</th>
+                                <th class="text-left">{% trans "Product Name" %}</th>
+                                <th class="text-left">{% trans "Price" %}</th>
+                                <th class="text-left">{% trans "Quantity" %}</th>
+                                <th class="text-left">{% trans "Amount" %}</th>
+                                <th class="text-left">{% trans "Status" %}</th>
+                                <th class="text-left">{% trans "Date" %}</th>
+                            </tr>
+                            {% for rs in orderitems %}
+                                <tr>
+                                    <td class="text-left">
+                                        <a href="{% url 'product_detail' rs.product_id rs.product.slug %}">
+                                                <img src="{{rs.product.image.url}}" alt="" style="height: 50px">
+                                        </a>
+                                    </td>
+                                    <td class="text-left">{{ rs.product.title }}</td>
+                                    <td class="text-left">{{ rs.price|currency:request.session.currency }}{{ request.session.currency }} </td>
+                                    <td class="text-left">{{ rs.quantity }} </td>
+                                    <td class="text-left">{{ rs.amount }} </td>
+                                    <td class="text-left">{{ rs.status }} </td>
+                                    <td class="text-left">{{ rs.create_at }} </td>
+                                </tr>
+                            {% endfor %}
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /section -->
+
+{% endblock %}

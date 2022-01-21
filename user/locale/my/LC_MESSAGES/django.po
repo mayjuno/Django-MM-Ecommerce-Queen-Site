@@ -1,0 +1,255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-03 16:29+0630\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: user/templates/login_form.html:15 user/templates/signup_form.html:15
+#: user/templates/user_comments.html:12
+#: user/templates/user_order_detail.html:16
+#: user/templates/user_order_products.html:16
+#: user/templates/user_orders.html:15 user/templates/user_password.html:15
+#: user/templates/user_profile.html:15 user/templates/user_update.html:15
+msgid "Home"
+msgstr "မူလစာမျက်နှာ"
+
+#: user/templates/login_form.html:16
+msgid "User Login"
+msgstr "အသုံးပြုသူဝင်ရန်"
+
+#: user/templates/login_form.html:33
+msgid "Login Form"
+msgstr "ဝင်ရန်ပုံစံ"
+
+#: user/templates/signup_form.html:16
+msgid "User Sign Up"
+msgstr "အသုံးပြုသူမှတ်ပုံတင်မည်"
+
+#: user/templates/signup_form.html:33
+msgid "Sign Up Form"
+msgstr "အသုံးပြုသူမှတ်ပုံတင်ပုံစံ"
+
+#: user/templates/signup_form.html:58
+msgid "Sign up"
+msgstr "မှတ်ပုံတင်မည်"
+
+#: user/templates/user_comments.html:13
+msgid "User Comments"
+msgstr "အသုံးပြုသူမှတ်ချက်များ"
+
+#: user/templates/user_comments.html:29
+msgid "'s"
+msgstr " ၏"
+
+#: user/templates/user_comments.html:29
+msgid "Comments"
+msgstr "မှတ်ချက်များ"
+
+#: user/templates/user_comments.html:33
+msgid "Product"
+msgstr "ပစ္စည်းအမည်"
+
+#: user/templates/user_comments.html:34
+msgid "Rate"
+msgstr "ထောက်ခံမှု"
+
+#: user/templates/user_comments.html:35
+msgid "Subject"
+msgstr "ခေါင်းစဥ်"
+
+#: user/templates/user_comments.html:36
+msgid "Comment"
+msgstr "မှတ်ချက်"
+
+#: user/templates/user_comments.html:37
+msgid "Status "
+msgstr "အခြေအနေ"
+
+#: user/templates/user_comments.html:38
+#: user/templates/user_order_detail.html:64
+#: user/templates/user_order_detail.html:86
+#: user/templates/user_order_products.html:46
+#: user/templates/user_orders.html:43
+msgid "Date"
+msgstr "ရက်စွဲ"
+
+#: user/templates/user_comments.html:39
+#: user/templates/user_order_products.html:47
+#: user/templates/user_order_products.html:64
+#: user/templates/user_orders.html:44 user/templates/user_orders.html:54
+msgid "Detail"
+msgstr "အသေးစိတ်"
+
+#: user/templates/user_comments.html:54
+msgid "Delete"
+msgstr "ပယ်ဖျက်မည်"
+
+#: user/templates/user_order_detail.html:17
+#: user/templates/user_order_detail.html:35
+msgid "Order Detail"
+msgstr "မှာယူမှုအသေးစိတ်"
+
+#: user/templates/user_order_detail.html:39 user/templates/user_profile.html:48
+msgid "Name Surname"
+msgstr "အမည်"
+
+#: user/templates/user_order_detail.html:43 user/templates/user_profile.html:56
+msgid "Phone"
+msgstr "ဖုန်း"
+
+#: user/templates/user_order_detail.html:47 user/templates/user_profile.html:60
+msgid "Address"
+msgstr "လိပ်စာ"
+
+#: user/templates/user_order_detail.html:51 user/templates/user_profile.html:64
+msgid "City"
+msgstr "မြို့"
+
+#: user/templates/user_order_detail.html:55 user/templates/user_profile.html:68
+msgid "Country"
+msgstr "နိုင်ငံ"
+
+#: user/templates/user_order_detail.html:59
+#: user/templates/user_order_detail.html:85
+#: user/templates/user_order_products.html:45
+#: user/templates/user_orders.html:42
+msgid "Status"
+msgstr "အခြေအနေ"
+
+#: user/templates/user_order_detail.html:68
+msgid "Shipping Info"
+msgstr "ပို့ဆောင်မှုအခြေအနေ"
+
+#: user/templates/user_order_detail.html:75
+msgid "Order Item List"
+msgstr "မှာယူထားသည့်ပစ္စည်းစာရင်း"
+
+#: user/templates/user_order_detail.html:80 user/templates/user_orders.html:38
+msgid "Id"
+msgstr "စဥ်"
+
+#: user/templates/user_order_detail.html:81
+#: user/templates/user_order_products.html:41
+msgid "Product Name"
+msgstr "အမျိုးအမည်များ"
+
+#: user/templates/user_order_detail.html:82
+#: user/templates/user_order_products.html:42
+msgid "Price"
+msgstr "ဈေးနှုန်း"
+
+#: user/templates/user_order_detail.html:83
+#: user/templates/user_order_products.html:43
+msgid "Quantity"
+msgstr "အရေအတွက်"
+
+#: user/templates/user_order_detail.html:84
+#: user/templates/user_order_products.html:44
+msgid "Amount"
+msgstr "ပမာဏ"
+
+#: user/templates/user_order_products.html:17
+msgid "Order Products"
+msgstr "မှာယူထားသည့်ပစ္စည်းများ"
+
+#: user/templates/user_order_products.html:35
+msgid "Order Product List"
+msgstr "မှာယူထားသည့်ပစ္စည်းစာရင်း"
+
+#: user/templates/user_order_products.html:40
+msgid "Id "
+msgstr "စဥ်"
+
+#: user/templates/user_orders.html:16 user/templates/user_orders.html:34
+msgid "Order List"
+msgstr "မှာယူမှုစာရင်း"
+
+#: user/templates/user_orders.html:39
+msgid "First Name"
+msgstr "အမည်"
+
+#: user/templates/user_orders.html:40
+msgid "Last Name"
+msgstr "နောက်ဆုံးအမည်"
+
+#: user/templates/user_orders.html:41
+msgid "Total"
+msgstr "စုစုပေါင်း"
+
+#: user/templates/user_panel.html:4
+msgid "User Panel"
+msgstr "အသုံးပြုသူနေရာ"
+
+#: user/templates/user_panel.html:8 user/templates/user_profile.html:16
+msgid "User Profile"
+msgstr "အသုံးပြုသူကိုယ်ရေးအချက်အလက်"
+
+#: user/templates/user_panel.html:9
+msgid "My Orders"
+msgstr "ကျွန်ုပ်၏မှာယူမှုများ"
+
+#: user/templates/user_panel.html:10
+msgid "My Orders Product"
+msgstr "ကျွန်ုပ်၏မှာယူထားသည့်ပစ္စည်း"
+
+#: user/templates/user_panel.html:11
+msgid "My Comments"
+msgstr "ကျွန်ုပ်၏မှတ်ချက်များ"
+
+#: user/templates/user_panel.html:12
+msgid "My Favorits"
+msgstr "ကျွန်ုပ်အနှစ်သက်ဆုံးများ"
+
+#: user/templates/user_panel.html:13
+msgid "My Products"
+msgstr "ကျွန်ုပ်၏ပစ္စည်းများ"
+
+#: user/templates/user_panel.html:14
+msgid "Logout"
+msgstr "ထွက်ခွါမည်"
+
+#: user/templates/user_password.html:16 user/templates/user_profile.html:43
+msgid "Change Password"
+msgstr "ကုတ်ပြောင်းမည်"
+
+#: user/templates/user_password.html:36
+msgid "User Change Password"
+msgstr "လျှိူ့ဝှက်ကုတ်ပြောင်း"
+
+#: user/templates/user_password.html:63
+msgid "Save changes"
+msgstr "ပြောင်းလဲသိမ်းစည်းမည်"
+
+#: user/templates/user_profile.html:36
+msgid "User Profile Info"
+msgstr "အသုံးပြုသူကိုယ်ရေးအချက်အလက်"
+
+#: user/templates/user_profile.html:42
+msgid "Update Profile"
+msgstr "ကိုယ်ရေးအချက်အလက်ပြောင်းရန်"
+
+#: user/templates/user_profile.html:52
+msgid "Email"
+msgstr "အီးမေးလ်"
+
+#: user/templates/user_update.html:16 user/templates/user_update.html:36
+msgid "User Profile Update"
+msgstr "ကိုယ်ရေးအချက်အလက်ပြောင်းရန်"
+
+#: user/templates/user_update.html:47
+msgid "Update"
+msgstr "အဆင့်မြင့်တင်မည်"
